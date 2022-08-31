@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Publication from "./components/Publication"
+import Search from "./components/Search"
+
 
 function App() {
+  const [inpFiltr, setInpFiltr] = useState("")
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Search setInpFiltr={setInpFiltr} />
+      <Publication inpFiltr={inpFiltr} />
     </div>
   );
 }

@@ -1,0 +1,47 @@
+body {
+  background-color: rgb(231, 231, 231);
+}
+
+
+
+
+.publications-container {
+  padding-top: 20px;
+  display: flex;
+  width: 90%;
+  max-width: 1140px;
+  margin: auto;
+  flex-wrap: wrap;
+
+  .publication {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
+    margin: 1%;
+    padding: 5px;
+    background-color: white;
+    @media (max-width: 850px) {
+      width: 46%;
+    }
+    @media (max-width: 550px) {
+      width: 100%;
+    }
+
+    &-title {
+      font-size: 22px;
+      color: rgb(63, 129, 244);
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    &-description {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    &-author {
+      opacity: 0.7;
+    }
+  }
+}
